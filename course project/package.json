@@ -1,0 +1,15 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "My app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.1",
+    "express": "^4.1.7",
+    "express-handlebars": "^4.0.3",
+    "sec b-parse": "^1.0.3"
+  }
+}
