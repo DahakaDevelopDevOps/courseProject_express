@@ -67,7 +67,11 @@
 </head>
 <body>
   <div class="container mt-5">
-    <form id="login-form">
+    <form id="registration-form">
+      <div class="mb-4"> <!-- increased margin -->
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" pattern="[a-zA-Z0-9]{4,}" title="Username must contain only letters and numbers, and be at least 4 characters long" required>
+      </div>
       <div class="mb-4"> <!-- increased margin -->
         <label for="email" class="form-label">Email address</label>
         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
@@ -75,14 +79,19 @@
       </div>
       <div class="mb-4"> <!-- increased margin -->
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" required>
+        <input type="password" class="form-control" id="password" pattern=".{8,}" title="Password must be at least 8 characters long" required>
       </div>
-      <button type="submit" class="btn btn-primary">Login</button>
-      <button type="button" class="btn btn-primary" onclick="redirectToRegistrationPage()">Register</button>
+      <div class="mb-4"> <!-- increased margin -->
+        <label for="confirm-password" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm-password" pattern=".{8,}" title="Password must be at least 8 characters long" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="button" class="btn btn-primary" onclick="redirectToLoginPage()">Back to Login</button>
     </form>
   </div>
+
   <script>
-    function redirectToRegistrationPage() {
+    function redirectToLoginPage() {
       window.location.href = 'http://localhost:3000/login';
     }
   </script>
